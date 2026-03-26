@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando JS</title>
+    <link rel="icon" type="image/png" href="./static/assets/HealthMonitor-logo-small-cropped.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: "Bungee", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo">Olá</p>
+    <button onclick="mudar()">Clique aqui!</button>
+    <p id="status">Aguardando...</p>
+    <button onclick="clicou()">Testar</button> <br> <br>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="somar()">Somar!!!</button>
+    <p id="resultado">oi</p>
+    <script>
+        function mudar() {
+            document.getElementById("demo").innerHTML = "Javascript é massa!"
+        }
+
+        function clicou() {
+            alert("Você clicou!!!")
+            document.getElementById('status').innerHTML = "Ativado 👌"
+        }
+
+        function somar(e) {
+            //e.preventDefault()
+
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+
+            document.getElementById("resultado").innerHTML = n1 + n2
+        }
+    </script>
+</body>
+
+</html>
